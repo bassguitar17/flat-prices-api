@@ -1,4 +1,4 @@
-package ua.roman.beta.domain;
+package ua.roman.flats.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,8 +26,20 @@ public class Advertisement {
     private Date creationTime;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_flat")
+    @JoinColumn(name = ConstantsDatabase.ID_ADDRESS)
+    private Address address;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = ConstantsDatabase.ID_BUILDING)
+    private Building building;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = ConstantsDatabase.ID_FLAT)
     private Flat flat;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = ConstantsDatabase.ID_LANDLORD)
+    private Landlord landlord;
 
     public Advertisement(String number, Date creationTime) {
         this.number = number;
