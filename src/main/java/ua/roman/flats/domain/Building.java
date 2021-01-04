@@ -17,9 +17,9 @@ public class Building {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private long id;
 
-    private int lift;
+    private boolean lift;
     private int numberOfFloors;
     private int floor;
 

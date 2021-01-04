@@ -17,7 +17,7 @@ public class Landlord {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private long id;
 
     private String telephone;
     private String emailAddress;

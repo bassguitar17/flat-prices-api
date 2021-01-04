@@ -14,7 +14,7 @@ import javax.persistence.Id;
 public class TypeLandlord {
 
     @Id
-    private String id;
+    private int id;
 
     private String name;
 
