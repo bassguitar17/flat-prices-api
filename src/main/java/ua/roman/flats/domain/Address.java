@@ -40,4 +40,11 @@ public class Address {
 
     @OneToMany(mappedBy = ConstantsDatabase.ADDRESS, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<Advertisement> advertisements = new HashSet<>();
+
+    public Address(String street, int buildingNumber, int flatNumber, int distanceToMainStation) {
+        this.street = street;
+        this.buildingNumber = buildingNumber;
+        this.flatNumber = flatNumber;
+        this.distanceToMainStation = distanceToMainStation;
+    }
 }

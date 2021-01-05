@@ -8,4 +8,5 @@ import java.util.List;
 public interface AddressRepository extends PagingAndSortingRepository<Address, Long> {
 
     List<Address> findByStreetIgnoreCase(String street);
+    List<Address> findByNameCityName(String name);
 }
