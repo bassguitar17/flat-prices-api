@@ -21,7 +21,7 @@ public class NameCity {
 
     private String name;
 
-    @OneToMany(mappedBy = ConstantsDatabase.NAME_CITY, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = ConstantsDatabase.NAME_CITY, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<Address> addresses = new HashSet<>();
 
     public NameCity(String name) {

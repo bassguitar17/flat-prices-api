@@ -14,7 +14,7 @@ import java.util.Date;
 public class Advertisement {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
     private String number;
@@ -41,9 +41,4 @@ public class Advertisement {
     @JoinColumn(name = ConstantsDatabase.ID_LANDLORD)
     private Landlord landlord;
 
-    public Advertisement(String number, Date creationTime) {
-        this.number = number;
-        this.creationTime = creationTime;
-        this.timestampAddingToDatabase = new Date();
-    }
 }
